@@ -5,19 +5,24 @@ namespace ProductManufacturingTrackingSystem
     class Program
     {
         static Random rand = new Random();
-        static int prodGoal = rand.Next(100,250);
+        static int prodGoal;
         static Product product = new Product("Ginger tea","pack");
-        static RawInput input1 = new RawInput("Sugar", rand.Next(25, 100));
-        static RawInput input2 = new RawInput("Ginger", rand.Next(50, 200));
+        static RawInput input1;
+        static RawInput input2;
         static int prodCount = 0;
         static bool running = true;
 
         static void Main(string[] args)
         {
             Console.WriteLine("Product Manufacturing Tracking System");
-            Console.WriteLine("Today's production goal is: " + prodGoal + " Units");
+            Console.Write("Set today's production goal: ");
+            prodGoal = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Product: " + product.getName());
-            Console.WriteLine("Available inputs\n" + input1.getName() +": "+ input1.getAmount() +"\n" + input2.getName() + ": " + input2.getAmount());
+            Console.Write("Enter amount of sugar in Kilos: ");
+            input1 = new RawInput("Sugar", Convert.ToInt32(Console.ReadLine()));
+            Console.Write("Enter amount of Ginger in Kilos: ");
+            input2 = new RawInput("Ginger", Convert.ToInt32(Console.ReadLine()));
+            Console.WriteLine("\nAvailable inputs\n" + input1.getName() +": "+ input1.getAmount() +"\n" + input2.getName() + ": " + input2.getAmount());
             processing(input1, input2);
             Console.WriteLine("Amount of products produced: " + prodCount + " " + product.getUnit());
             Console.WriteLine("-----------------Today's Production Summary----------------------");
@@ -66,10 +71,7 @@ namespace ProductManufacturingTrackingSystem
                     Console.WriteLine("Remaining inputs\n" + input1.getName() + ": " + input1.getAmount() + "\n" + input2.getName() + ": " + input2.getAmount());
                     reason = "insufficient amount of " + input2.getName();
                 }
-                
-                
                 Console.WriteLine(reason);
-
             }
         }
         
