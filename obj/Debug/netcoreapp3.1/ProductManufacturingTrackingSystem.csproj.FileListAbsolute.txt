@@ -1,0 +1,13 @@
+C:\Users\geron\Desktop\BSIT 2-1\OOP\Projects\GachaSimulator\ProductManufacturingTrackingSystem\ProductManufacturingTrackingSystem\bin\Debug\netcoreapp3.1\ProductManufacturingTrackingSystem.exe
+C:\Users\geron\Desktop\BSIT 2-1\OOP\Projects\GachaSimulator\ProductManufacturingTrackingSystem\ProductManufacturingTrackingSystem\bin\Debug\netcoreapp3.1\ProductManufacturingTrackingSystem.deps.json
+C:\Users\geron\Desktop\BSIT 2-1\OOP\Projects\GachaSimulator\ProductManufacturingTrackingSystem\ProductManufacturingTrackingSystem\bin\Debug\netcoreapp3.1\ProductManufacturingTrackingSystem.runtimeconfig.json
+C:\Users\geron\Desktop\BSIT 2-1\OOP\Projects\GachaSimulator\ProductManufacturingTrackingSystem\ProductManufacturingTrackingSystem\bin\Debug\netcoreapp3.1\ProductManufacturingTrackingSystem.runtimeconfig.dev.json
+C:\Users\geron\Desktop\BSIT 2-1\OOP\Projects\GachaSimulator\ProductManufacturingTrackingSystem\ProductManufacturingTrackingSystem\bin\Debug\netcoreapp3.1\ProductManufacturingTrackingSystem.dll
+C:\Users\geron\Desktop\BSIT 2-1\OOP\Projects\GachaSimulator\ProductManufacturingTrackingSystem\ProductManufacturingTrackingSystem\bin\Debug\netcoreapp3.1\ProductManufacturingTrackingSystem.pdb
+C:\Users\geron\Desktop\BSIT 2-1\OOP\Projects\GachaSimulator\ProductManufacturingTrackingSystem\ProductManufacturingTrackingSystem\obj\Debug\netcoreapp3.1\ProductManufacturingTrackingSystem.csprojAssemblyReference.cache
+C:\Users\geron\Desktop\BSIT 2-1\OOP\Projects\GachaSimulator\ProductManufacturingTrackingSystem\ProductManufacturingTrackingSystem\obj\Debug\netcoreapp3.1\ProductManufacturingTrackingSystem.AssemblyInfoInputs.cache
+C:\Users\geron\Desktop\BSIT 2-1\OOP\Projects\GachaSimulator\ProductManufacturingTrackingSystem\ProductManufacturingTrackingSystem\obj\Debug\netcoreapp3.1\ProductManufacturingTrackingSystem.AssemblyInfo.cs
+C:\Users\geron\Desktop\BSIT 2-1\OOP\Projects\GachaSimulator\ProductManufacturingTrackingSystem\ProductManufacturingTrackingSystem\obj\Debug\netcoreapp3.1\ProductManufacturingTrackingSystem.csproj.CoreCompileInputs.cache
+C:\Users\geron\Desktop\BSIT 2-1\OOP\Projects\GachaSimulator\ProductManufacturingTrackingSystem\ProductManufacturingTrackingSystem\obj\Debug\netcoreapp3.1\ProductManufacturingTrackingSystem.dll
+C:\Users\geron\Desktop\BSIT 2-1\OOP\Projects\GachaSimulator\ProductManufacturingTrackingSystem\ProductManufacturingTrackingSystem\obj\Debug\netcoreapp3.1\ProductManufacturingTrackingSystem.pdb
+C:\Users\geron\Desktop\BSIT 2-1\OOP\Projects\GachaSimulator\ProductManufacturingTrackingSystem\ProductManufacturingTrackingSystem\obj\Debug\netcoreapp3.1\ProductManufacturingTrackingSystem.genruntimeconfig.cache
