@@ -45,8 +45,8 @@ namespace ProductManufacturingTrackingSystem
                 }
                 else
                 {
-                    input1.setAmount(input1.GetAmount() - 1);
-                    input2.setAmount(input2.GetAmount() - 2);
+                    input1.SetAmount(input1.GetAmount() - 1);
+                    input2.SetAmount(input2.GetAmount() - 2);
                     prodCount += 4;
                 }
             }
@@ -99,7 +99,7 @@ namespace ProductManufacturingTrackingSystem
         {
             return this.name;
         }
-        public void setAmount(int amount)
+        public void SetAmount(int amount)
         {
             this.amount = amount;
         }
