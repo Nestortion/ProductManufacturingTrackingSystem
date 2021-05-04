@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ProductManufacturingTrackingSystem
 {
@@ -11,6 +12,7 @@ namespace ProductManufacturingTrackingSystem
         static RawInput input2;
         static int prodCount = 0;
         static bool running = true;
+        static List<Product> productConditions = new List<Product>();
         
 
         static void Main(string[] args)
@@ -36,15 +38,27 @@ namespace ProductManufacturingTrackingSystem
 
         static void Processing(RawInput input1, RawInput input2)
         {
+            bool isGoodCondition;
+            double chanceForBadCondition;
             while (running)
             {
-                
+                chanceForBadCondition = rand.NextDouble();
+                if (chanceForBadCondition > 0 && chanceForBadCondition < 0.05)
+                {
+                    isGoodCondition = false;
+                }
+                else
+                {
+                    isGoodCondition = true;
+                }
+
                 if (input1.GetAmount() == 0 || input2.GetAmount() < 2 )
                 {
                     running = false;
                 }
                 else
                 {
+                    productConditions.Add(new Product(product.GetName(),product.GetUnit(), isGoodCondition));
                     input1.SetAmount(input1.GetAmount() - 1);
                     input2.SetAmount(input2.GetAmount() - 2);
                     prodCount += 4;
@@ -79,6 +93,41 @@ namespace ProductManufacturingTrackingSystem
                 }
                 Console.WriteLine(reason);
             }
+            ProductConditionCheck();
+
+            
+        }
+        static void ProductConditionCheck()
+        {
+            int badConditionCount = 0;
+            int goodConditionCount = 0;
+            double percentCondition;
+            List<int> productsWithPoorCondition = new List<int>();
+            for (int i = 0; i < productConditions.Count; i++)
+            {
+                if (productConditions[i].condition.Contains("Good"))
+                {
+                    goodConditionCount++;
+                }
+                else if (productConditions[i].condition.Contains("Not good"))
+                {
+                    productsWithPoorCondition.Add(i + 1);
+                    badConditionCount++;
+                }
+                else
+                {
+                    Console.WriteLine("Error in ProductConditionCheck");
+                }
+            }
+
+            percentCondition = (double)goodConditionCount / ((double)goodConditionCount + (double)badConditionCount) * 100;
+
+            Console.WriteLine(Math.Round(percentCondition,2) + "% of the total products has Good Condition");
+            Console.WriteLine("Products with poor conditions are: ");
+            foreach (var item in productsWithPoorCondition)
+            {
+                Console.WriteLine(item);
+            }
         }
         
     }
@@ -108,11 +157,23 @@ namespace ProductManufacturingTrackingSystem
     {
         private string name;
         private string unit;
+        private string _condition;
 
         public Product(string name, string unit)
         {
             this.name = name;
             this.unit = unit;
+        }
+        public Product(string name, string unit, bool condition)
+        {
+            this.name = name;
+            this.unit = unit;
+            this.condition = condition == true ? "Good" : "Not good";
+        }
+        public string condition
+        {
+            get => _condition;
+            set => _condition = value;
         }
         public string GetName()
         {
